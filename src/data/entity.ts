@@ -32,7 +32,9 @@ export const computeNameDisplay = (stateObj: HassEntity, config: CardConfig) => 
 };
 
 export const codeRequired = (stateObj: HassEntity) => {
-  return stateObj.attributes.code_format !== null;
+  //return stateObj.attributes.code_format !== null;
+  // Code is never required, changed to hide the keypad
+  return false;
 };
 
 export const computeStateColor = (stateObj: HassEntity) => {
